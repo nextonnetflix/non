@@ -5,6 +5,8 @@ import pandas as pd
 movies_data=pickle.load(open('moviesmodel.pkl','rb'))
 similarity=pickle.load(open('similarity.pkl','rb'))
 
+
+
 import difflib
 def recommend(movie_name):
 	list_of_all_titles = movies_data['title'].tolist()
