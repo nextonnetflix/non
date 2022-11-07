@@ -2,10 +2,13 @@ import streamlit as st
 import pickle
 import pandas as pd
 
+#https://media.githubusercontent.com/media/nextonnetflix/non/main/similarity.pkl
+
 movies_data=pickle.load(open('moviesmodel.pkl','rb'))
-similarity=pickle.load(open('similarity.pkl','rb'))
+#similarity=pickle.load(open('https://media.githubusercontent.com/media/nextonnetflix/non/main/similarity.pkl','rb'))
 
-
+import urllib.request
+similarity=pickle.load(urllib.request.urlopen("https://media.githubusercontent.com/media/nextonnetflix/non/main/similarity.pkl"))
 
 import difflib
 def recommend(movie_name):
