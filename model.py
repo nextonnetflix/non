@@ -7,8 +7,9 @@ import pandas as pd
 movies_data=pickle.load(open('moviesmodel.pkl','rb'))
 #similarity=pickle.load(open('https://media.githubusercontent.com/media/nextonnetflix/non/main/similarity.pkl','rb'))
 
-import urllib.request
-similarity=pickle.load(urllib.request.urlopen("https://media.githubusercontent.com/media/nextonnetflix/non/main/similarity.pkl"))
+#import urllib.request
+#similarity=pickle.load(urllib.request.urlopen("https://media.githubusercontent.com/media/nextonnetflix/non/main/similarity.pkl"))
+similarity=pickle.load(open('similarity.pkl','rb'))
 
 import difflib
 def recommend(movie_name):
